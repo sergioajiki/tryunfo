@@ -2,21 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class Form extends React.Component {
-  // state = {
-  //   cardName: '',
-  //   cardDescription: '',
-  //   cardAttr1: 0,
-  //   cardAttr2: 0,
-  //   cardAttr3: 0,
-  //   cardImage: '',
-  //   cardRare: '',
-  //   cardTrunfo: false,
-  //   hasTrunfo: false,
-  //   isSaveButtonDisabled: false,
-  //   onInputChange: '',
-  //   onSaveButtonClick: '',
-  // }
-
+  state = {
+    cardName: '',
+    cardDescription: '',
+    cardAttr1: 0,
+    cardAttr2: 0,
+    cardAttr3: 0,
+    cardImage: '',
+    cardRare: '',
+    cardTrunfo: false,
+    hasTrunfo: false,
+    isSaveButtonDisabled: false,
+    onInputChange: '',
+    onSaveButtonClick: '',
+  }
+  onInputChange = (event) => {
+    console.log(event.target.name);
+    this.setState({
+      [event.target.name]: event.target.value,
+    })
+  }
   render() {
     const {
       cardName,
@@ -31,7 +36,7 @@ class Form extends React.Component {
       isSaveButtonDisabled,
       onInputChange,
       onSaveButtonClick,
-    } = this.props;
+    } = this.state;
 
     return (
       <>
@@ -42,11 +47,11 @@ class Form extends React.Component {
             <input
               data-testid="name-input"
               id="name"
-              name="name"
+              name="cardName"
               type="text"
               maxLength="40"
-              value={ cardName }
-              onChange={ onInputChange }
+              value={cardName}
+              onChange={this.onInputChange}
               required
             />
           </label>
@@ -56,11 +61,11 @@ class Form extends React.Component {
             <textarea
               data-testid="description-input"
               id="description"
-              name="description"
+              name="cardDescription"
               type="text"
               maxLength="500"
-              value={ cardDescription }
-              onChange={ onInputChange }
+              value={cardDescription}
+              onChange={this.onInputChange}
               required
             />
           </label>
@@ -70,11 +75,11 @@ class Form extends React.Component {
             <input
               data-testid="attr1-input"
               id="attr01"
-              name="attr01"
+              name="cardAttr1"
               type="number"
               maxLength="5"
-              value={ cardAttr1 }
-              onChange={ onInputChange }
+              value={cardAttr1}
+              onChange={this.onInputChange}
               required
             />
           </label>
@@ -84,11 +89,11 @@ class Form extends React.Component {
             <input
               data-testid="attr2-input"
               id="attr02"
-              name="attr02"
+              name="cardAttr2"
               type="number"
               maxLength="5"
-              value={ cardAttr2 }
-              onChange={ onInputChange }
+              value={cardAttr2}
+              onChange={this.onInputChange}
               required
             />
           </label>
@@ -98,11 +103,11 @@ class Form extends React.Component {
             <input
               data-testid="attr3-input"
               id="attr3"
-              name="attr03"
+              name="cardAttr3"
               type="number"
               maxLength="5"
-              value={ cardAttr3 }
-              onChange={ onInputChange }
+              value={cardAttr3}
+              onChange={this.onInputChange}
               required
             />
           </label>
@@ -112,11 +117,11 @@ class Form extends React.Component {
             <input
               data-testid="image-input"
               id="image"
-              name="image"
+              name="cardImage"
               type="text"
               maxLength="40"
-              value={ cardImage }
-              onChange={ onInputChange }
+              value={cardImage}
+              onChange={this.onInputChange}
               required
             />
           </label>
@@ -126,11 +131,11 @@ class Form extends React.Component {
             <select
               data-testid="rare-input"
               id="rarity"
-              name="rarity"
+              name="cardRare"
               // type="text"
               // maxLength="40"
-              value={ cardRare }
-              onChange={ onInputChange }
+              value={cardRare}
+              onChange={this.onInputChange}
               required
             >
               <option value="normal">normal</option>
@@ -144,11 +149,11 @@ class Form extends React.Component {
             <input
               data-testid="trunfo-input"
               id="super-trunfo"
-              name="super-trunfo"
+              name="cardTrunfo"
               type="checkbox"
               // maxLength="40"
-              checked={ cardTrunfo }
-              onChange={ onInputChange }
+              checked={cardTrunfo}
+              onChange={this.onInputChange}
               required
             />
           </label>
@@ -156,8 +161,8 @@ class Form extends React.Component {
           <button
             type="submit"
             data-testid="save-button"
-            disabled={ isSaveButtonDisabled }
-            onClick={ onSaveButtonClick }
+            disabled={isSaveButtonDisabled}
+            onClick={onSaveButtonClick}
           >
             Salvar
           </button>
