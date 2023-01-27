@@ -2,6 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class Form extends React.Component {
+  // state = {
+  //   cardName: '',
+  //   cardDescription: '',
+  //   cardAttr1: 0,
+  //   cardAttr2: 0,
+  //   cardAttr3: 0,
+  //   cardImage: '',
+  //   cardRare: '',
+  //   cardTrunfo: false,
+  //   hasTrunfo: false,
+  //   isSaveButtonDisabled: false,
+  //   onInputChange: '',
+  //   onSaveButtonClick: '',
+  // }
+
   render() {
     const {
       cardName,
