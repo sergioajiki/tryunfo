@@ -1,22 +1,22 @@
 main {
-    background-color: gray;
+  background-color: gray;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 .prin {
-    display: flex;
-    justify-content: space-around;    
+  display: flex;
+  justify-content: space-around;
 }
 
 .formulario {
-    background-color: darkgray;
-    width: 45%;    
+  background-color: darkgray;
+  width: 45%;
 }
 
 .card {
-    background-color: dodgerblue;
-    width: 45%;
+  background-color: dodgerblue;
+  width: 45%;
 }
