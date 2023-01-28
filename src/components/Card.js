@@ -21,28 +21,41 @@ class Card extends React.Component {
     return (
       <div>
         <span data-testid="name-card">
+          Name
           {cardName}
         </span>
+        <br />
         <img data-testid="image-card" src={ cardImage } alt={ cardName } />
+        <br />
         <span data-testid="description-card">
+          Descrição
           {cardDescription}
         </span>
+        <br />
         <span data-testid="attr1-card">
+          attrib1
           {cardAttr1}
         </span>
+        <br />
         <span data-testid="attr2-card">
+          attrib2
           {cardAttr2}
         </span>
+        <br />
         <span data-testid="attr3-card">
+          attrib3
           {cardAttr3}
         </span>
+        <br />
         <span data-testid="rare-card">
+          Nivel
           {cardRare}
         </span>
+        <br />
         {
           (cardTrunfo === true) && <span data-testid="trunfo-card">Super Trunfo</span>
         }
-
+        <br />
       </div>
     );
   }

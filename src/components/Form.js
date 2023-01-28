@@ -2,27 +2,45 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class Form extends React.Component {
-  state = {
-    cardName: '',
-    cardDescription: '',
-    cardAttr1: 0,
-    cardAttr2: 0,
-    cardAttr3: 0,
-    cardImage: '',
-    cardRare: '',
-    cardTrunfo: false,
-    hasTrunfo: false,
-    isSaveButtonDisabled: false,
-    onInputChange: '',
-    onSaveButtonClick: '',
-  }
-  onInputChange = (event) => {
-    console.log(event.target.name);
-    this.setState({
-      [event.target.name]: event.target.value,
-    })
-  }
+  // state = {
+  //   cardName: '',
+  //   cardDescription: '',
+  //   cardAttr1: 0,
+  //   cardAttr2: 0,
+  //   cardAttr3: 0,
+  //   cardImage: '',
+  //   cardRare: '',
+  //   cardTrunfo: false,
+  //   // hasTrunfo: false,
+  //   isSaveButtonDisabled: false,
+  //   // onInputChange: '',
+  //   // onSaveButtonClick: '',
+  // };
+
+  // onInputChange = (event) => {
+  //   const { name, value } = event.target;
+  //   // console.log(name);
+  //   this.setState({
+  //     // [event.target.name]: event.target.value,
+  //     [name]: value,
+  //   });
+  // };
+
   render() {
+    // const {
+    //   cardName,
+    //   cardDescription,
+    //   cardAttr1,
+    //   cardAttr2,
+    //   cardAttr3,
+    //   cardImage,
+    //   cardRare,
+    //   cardTrunfo,
+    //   // hasTrunfo,
+    //   isSaveButtonDisabled,
+    //   // onInputChange,
+    //   onSaveButtonClick,
+    // } = this.state;
     const {
       cardName,
       cardDescription,
@@ -32,11 +50,10 @@ class Form extends React.Component {
       cardImage,
       cardRare,
       cardTrunfo,
-      // hasTrunfo,
       isSaveButtonDisabled,
       onInputChange,
       onSaveButtonClick,
-    } = this.state;
+    } = this.props;
 
     return (
       <>
@@ -51,7 +68,7 @@ class Form extends React.Component {
               type="text"
               maxLength="40"
               value={cardName}
-              onChange={this.onInputChange}
+              onChange={onInputChange}
               required
             />
           </label>
@@ -65,7 +82,7 @@ class Form extends React.Component {
               type="text"
               maxLength="500"
               value={cardDescription}
-              onChange={this.onInputChange}
+              onChange={onInputChange}
               required
             />
           </label>
@@ -79,7 +96,7 @@ class Form extends React.Component {
               type="number"
               maxLength="5"
               value={cardAttr1}
-              onChange={this.onInputChange}
+              onChange={onInputChange}
               required
             />
           </label>
@@ -93,7 +110,7 @@ class Form extends React.Component {
               type="number"
               maxLength="5"
               value={cardAttr2}
-              onChange={this.onInputChange}
+              onChange={onInputChange}
               required
             />
           </label>
@@ -107,7 +124,7 @@ class Form extends React.Component {
               type="number"
               maxLength="5"
               value={cardAttr3}
-              onChange={this.onInputChange}
+              onChange={onInputChange}
               required
             />
           </label>
@@ -121,7 +138,7 @@ class Form extends React.Component {
               type="text"
               maxLength="40"
               value={cardImage}
-              onChange={this.onInputChange}
+              onChange={onInputChange}
               required
             />
           </label>
@@ -135,7 +152,7 @@ class Form extends React.Component {
               // type="text"
               // maxLength="40"
               value={cardRare}
-              onChange={this.onInputChange}
+              onChange={onInputChange}
               required
             >
               <option value="normal">normal</option>
@@ -153,7 +170,7 @@ class Form extends React.Component {
               type="checkbox"
               // maxLength="40"
               checked={cardTrunfo}
-              onChange={this.onInputChange}
+              onChange={onInputChange}
               required
             />
           </label>
