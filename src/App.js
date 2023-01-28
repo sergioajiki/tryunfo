@@ -12,7 +12,7 @@ class App extends React.Component {
     cardAttr2: '',
     cardAttr3: '',
     cardImage: '',
-    cardRare: '',
+    cardRare: 'normal',
     cardTrunfo: false,
     // hasTrunfo: false,
     isSaveButtonDisabled: true,
@@ -30,6 +30,11 @@ class App extends React.Component {
     });
   };
 
+checkFieldEntry = () => {
+  
+
+}
+
   isSaveButtonDisabled = () => {
     // nome vazio
     // imagem vazio
@@ -44,8 +49,6 @@ class App extends React.Component {
     // chegar aqui
     // this.setState({disabled: false}) 
     }
-
-
 
   render() {
     const {

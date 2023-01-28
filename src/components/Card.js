@@ -25,7 +25,15 @@ class Card extends React.Component {
           {cardName}
         </span>
         <br />
-        <img data-testid="image-card" src={ cardImage } alt={ cardName } />
+        {/* <span>
+          image
+        {cardImage}
+        </span> */}
+
+        <span>
+        <img data-testid="image-card" src=
+        { cardImage } alt={ cardName } />
+        </span>
         <br />
         <span data-testid="description-card">
           Descrição
