@@ -2,6 +2,7 @@ import React from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
 import './App.css';
+import { toHaveAttribute } from '@testing-library/jest-dom/dist/matchers';
 
 class App extends React.Component {
   state = {
@@ -14,7 +15,7 @@ class App extends React.Component {
     cardRare: '',
     cardTrunfo: false,
     // hasTrunfo: false,
-    // isSaveButtonDisabled: false,
+    isSaveButtonDisabled: true,
     // onInputChange: '',
     // onSaveButtonClick: '',
   };
@@ -29,6 +30,23 @@ class App extends React.Component {
     });
   };
 
+  isSaveButtonDisabled = () => {
+    // nome vazio
+    // imagem vazio
+    // descrição vazio
+
+    // melhor tratar atributos separados
+    // 0 < atrib1 < 90 
+    // 0 < atrib2 < 90
+    // 0 < atrib3 > 90
+    // tudo isso menor que 210
+// criar função para validar campos vazios
+    // chegar aqui
+    // this.setState({disabled: false}) 
+    }
+
+
+
   render() {
     const {
       cardName,
@@ -40,7 +58,7 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
       // hasTrunfo,
-      // isSaveButtonDisabled,
+      isSaveButtonDisabled,
       // onInputChange,
       // onSaveButtonClick,
     } = this.state;
@@ -59,6 +77,7 @@ class App extends React.Component {
               cardImage={ cardImage }
               cardRare={ cardRare }
               cardTrunfo={ cardTrunfo }
+              isSaveButtonDisabled= { isSaveButtonDisabled }
             />
           </div>
           <div className="card">
