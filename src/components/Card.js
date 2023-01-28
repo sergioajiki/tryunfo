@@ -53,7 +53,7 @@ class Card extends React.Component {
         </span>
         <br />
         {
-          (cardTrunfo === true) && <span data-testid="trunfo-card">Super Trunfo</span>
+          (!cardTrunfo === false) && <span data-testid="trunfo-card">Super Trunfo</span>
         }
         <br />
       </div>

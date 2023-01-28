@@ -1,0 +1,22 @@
+main {
+    background-color: gray;
+}
+
+h1 {
+    text-align: center;
+}
+
+.prin {
+    display: flex;
+    justify-content: space-around;    
+}
+
+.formulario {
+    background-color: darkgray;
+    width: 45%;    
+}
+
+.card {
+    background-color: dodgerblue;
+    width: 45%;
+}

@@ -67,8 +67,8 @@ class Form extends React.Component {
               name="cardName"
               type="text"
               maxLength="40"
-              value={cardName}
-              onChange={onInputChange}
+              value={ cardName }
+              onChange={ onInputChange }
               required
             />
           </label>
@@ -81,8 +81,8 @@ class Form extends React.Component {
               name="cardDescription"
               type="text"
               maxLength="500"
-              value={cardDescription}
-              onChange={onInputChange}
+              value={ cardDescription }
+              onChange={ onInputChange }
               required
             />
           </label>
@@ -95,8 +95,8 @@ class Form extends React.Component {
               name="cardAttr1"
               type="number"
               maxLength="5"
-              value={cardAttr1}
-              onChange={onInputChange}
+              value={ cardAttr1 }
+              onChange={ onInputChange }
               required
             />
           </label>
@@ -109,8 +109,8 @@ class Form extends React.Component {
               name="cardAttr2"
               type="number"
               maxLength="5"
-              value={cardAttr2}
-              onChange={onInputChange}
+              value={ cardAttr2 }
+              onChange={ onInputChange }
               required
             />
           </label>
@@ -123,8 +123,8 @@ class Form extends React.Component {
               name="cardAttr3"
               type="number"
               maxLength="5"
-              value={cardAttr3}
-              onChange={onInputChange}
+              value={ cardAttr3 }
+              onChange={ onInputChange }
               required
             />
           </label>
@@ -137,8 +137,8 @@ class Form extends React.Component {
               name="cardImage"
               type="text"
               maxLength="40"
-              value={cardImage}
-              onChange={onInputChange}
+              value={ cardImage }
+              onChange={ onInputChange }
               required
             />
           </label>
@@ -151,8 +151,8 @@ class Form extends React.Component {
               name="cardRare"
               // type="text"
               // maxLength="40"
-              value={cardRare}
-              onChange={onInputChange}
+              value={ cardRare }
+              onChange={ onInputChange }
               required
             >
               <option value="normal">normal</option>
@@ -169,8 +169,8 @@ class Form extends React.Component {
               name="cardTrunfo"
               type="checkbox"
               // maxLength="40"
-              checked={cardTrunfo}
-              onChange={onInputChange}
+              checked={ cardTrunfo }
+              onChange={ onInputChange }
               required
             />
           </label>
@@ -178,8 +178,8 @@ class Form extends React.Component {
           <button
             type="submit"
             data-testid="save-button"
-            disabled={isSaveButtonDisabled}
-            onClick={onSaveButtonClick}
+            disabled={ isSaveButtonDisabled }
+            onClick={ onSaveButtonClick }
           >
             Salvar
           </button>
