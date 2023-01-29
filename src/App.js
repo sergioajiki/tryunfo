@@ -2,7 +2,7 @@ import React from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
 import './App.css';
-import { toHaveAttribute } from '@testing-library/jest-dom/dist/matchers';
+// import { toHaveAttribute } from '@testing-library/jest-dom/dist/matchers';
 
 class App extends React.Component {
   state = {
@@ -30,25 +30,34 @@ class App extends React.Component {
     });
   };
 
-checkFieldEntry = () => {
-  
-
-}
+  checkFieldEntry = () => {
+    const {
+      cardName,
+      cardDescription,
+      cardImage,
+      cardRare,
+    } = this.state;
+    if (cardName.length === 0
+    || cardDescription.length === 0
+    || cardImage.length === 0
+    || cardRare === '') {
+      return true;
+    }
+  };
 
   isSaveButtonDisabled = () => {
     // nome vazio
     // imagem vazio
     // descrição vazio
-
     // melhor tratar atributos separados
-    // 0 < atrib1 < 90 
+    // 0 < atrib1 < 90
     // 0 < atrib2 < 90
     // 0 < atrib3 > 90
     // tudo isso menor que 210
-// criar função para validar campos vazios
+    // criar função para validar campos vazios
     // chegar aqui
-    // this.setState({disabled: false}) 
-    }
+    // this.setState({disabled: false})
+  };
 
   render() {
     const {
@@ -80,7 +89,7 @@ checkFieldEntry = () => {
               cardImage={ cardImage }
               cardRare={ cardRare }
               cardTrunfo={ cardTrunfo }
-              isSaveButtonDisabled= { isSaveButtonDisabled }
+              isSaveButtonDisabled={ isSaveButtonDisabled }
             />
           </div>
           <div className="card">
