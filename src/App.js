@@ -30,34 +30,49 @@ class App extends React.Component {
     });
   };
 
-  checkFieldEntry = () => {
-    const {
-      cardName,
-      cardDescription,
-      cardImage,
-      cardRare,
-    } = this.state;
-    if (cardName.length === 0
-    || cardDescription.length === 0
-    || cardImage.length === 0
-    || cardRare === '') {
-      return true;
-    }
-  };
+  // checkFieldEntry = () => {
+  //   const {
+  //     cardName,
+  //     cardDescription,
+  //     cardImage,
+  //     cardRare,
+  //   } = this.state;
+  //   if (cardName.length === 0
+  //   || cardDescription.length === 0
+  //   || cardImage.length === 0
+  //   || cardRare === '') {
+  //     return false;
+  //   }
+  // };
 
-  isSaveButtonDisabled = () => {
-    // nome vazio
-    // imagem vazio
-    // descrição vazio
-    // melhor tratar atributos separados
-    // 0 < atrib1 < 90
-    // 0 < atrib2 < 90
-    // 0 < atrib3 > 90
-    // tudo isso menor que 210
-    // criar função para validar campos vazios
-    // chegar aqui
-    // this.setState({disabled: false})
-  };
+  // checkAttributeValues = () => {
+  //   const {
+  //     cardAttr1,
+  //     cardAttr2,
+  //     cardAttr3,
+  //   } = this.state;
+  //   const sumAttributeValues = cardAttr1 + cardAttr2 + cardAttr3;
+  //   const validateAttribute1 = cardAttr1 > 0 && cardAttr1 < 90;
+  //   const validateAttribute2 = cardAttr2 > 0 && cardAttr2 < 90;
+  //   const validateAttribute3 = cardAttr3 > 0 && cardAttr3 < 90;
+  //   if (sumAttributeValues < 210
+  //     || validateAttribute1 === true
+  //     || validateAttribute2 === true
+  //     || validateAttribute3 === true
+  //   ) {
+  //     return false;
+  //   }
+  // };
+
+  // isSaveButtonDisabled = () => {
+  //   if(checkAttributeValues === false 
+  //     && checkFieldEntry === false
+  //     ) {
+  //     this.setState({
+  //       isSaveButtonDisabled: false,
+  //     })
+  //   }
+  // };
 
   render() {
     const {
@@ -89,12 +104,12 @@ class App extends React.Component {
               cardImage={ cardImage }
               cardRare={ cardRare }
               cardTrunfo={ cardTrunfo }
-              isSaveButtonDisabled={ isSaveButtonDisabled }
+              isSaveButtonDisabled={ this.isSaveButtonDisabled }
             />
           </div>
           <div className="card">
             <Card
-              onInputChange={ this.onInputChangeForm }
+              // onInputChange={ this.onInputChangeForm }
               cardName={ cardName }
               cardDescription={ cardDescription }
               cardAttr1={ cardAttr1 }
