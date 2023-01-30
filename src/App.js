@@ -15,7 +15,7 @@ class App extends React.Component {
     cardRare: 'normal',
     cardTrunfo: false,
     // hasTrunfo: false,
-    isSaveButtonDisabled: false,
+    isSaveButtonDisabled: true,
     // onInputChange: '',
     // onSaveButtonClick: '',
   };
@@ -97,10 +97,10 @@ class App extends React.Component {
     // console.log(this.checkAttributeValues());
     // console.log(this.checkFieldEntry())
     if (this.checkFieldEntry() === false && this.checkAttributeValues() === false) {
-       return false
+       return true
             } else {
-              return true
-            }
+              return false
+    }
               
   };
 
