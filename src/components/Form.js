@@ -94,7 +94,7 @@ class Form extends React.Component {
               id="attr01"
               name="cardAttr1"
               type="number"
-              maxLength="5"
+              maxLength=""
               value={ cardAttr1 }
               onChange={ onInputChange }
               required
@@ -174,12 +174,13 @@ class Form extends React.Component {
               required
             />
           </label>
-          <br />
           <button
             type="submit"
             data-testid="save-button"
-            disabled="true"
-            // disabled={ isSaveButtonDisabled }
+            // disabled={true}
+            // disabled={ !cardName }
+            disabled={ !isSaveButtonDisabled }
+            // disabled
             onClick={ onSaveButtonClick }
           >
             Salvar

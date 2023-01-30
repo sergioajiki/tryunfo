@@ -55,6 +55,9 @@ class Card extends React.Component {
         {
           (!cardTrunfo === false) && <span data-testid="trunfo-card">Super Trunfo</span>
         }
+        {/* <span>
+        { isSaveButtonDisabled }
+        </span> */}
         <br />
       </div>
     );
