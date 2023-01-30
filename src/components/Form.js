@@ -174,6 +174,7 @@ class Form extends React.Component {
               required
             />
           </label>
+          <br />
           <button
             type="submit"
             data-testid="save-button"
