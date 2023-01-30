@@ -36,27 +36,12 @@ class App extends React.Component {
       cardDescription,
       cardImage,
       cardRare,
-    } = this.state;
-    // console.log(this.state)
-    // if (cardName.length === 0
-    // || cardDescription.length === 0
-    // || cardImage.length === 0
-    // || cardRare === '') {
-    //   return true;
-    // }
-    // return false;
-    // return (cardName.length === 0
-    //   || cardDescription.length === 0
-    //   || cardImage.length === 0
-    //   || cardRare === '');
-  return (cardName.length > 0
-    || cardDescription.length > 0
-    || cardImage.length > 0
-    || cardRare > 0);
+    } = this.state;    
+    return (cardName.length === 0
+      || cardDescription.length === 0
+      || cardImage.length === 0
+      || cardRare === '');
   };
-
-
-
 
   checkAttributeValues = () => {
     const {
@@ -64,44 +49,30 @@ class App extends React.Component {
       cardAttr2,
       cardAttr3,
     } = this.state;
-    // console.log(this.state);
     const sumMaxAttrib = 210;
     const maxAttrib = 90;
     const sumAttributeValues = parseInt(cardAttr1, 10)
     + parseInt(cardAttr2, 10)
     + parseInt(cardAttr3, 10);
-    // console.log(sumAttributeValues);
     const validateAttribute1 = parseInt(cardAttr1, 10) >= 0
     && parseInt(cardAttr1, 10) <= maxAttrib;
     const validateAttribute2 = parseInt(cardAttr2, 10) >= 0
     && parseInt(cardAttr2, 10) <= maxAttrib;
     const validateAttribute3 = parseInt(cardAttr3, 10) >= 0
     && parseInt(cardAttr3, 10) <= maxAttrib;
-    // if (sumAttributeValues > sumMaxAttrib
-    //   || !validateAttribute1
-    //   || !validateAttribute2
-    //   || !validateAttribute3
-    // ) {
-    //   return true;
-    // }
-    // return false;
-    return (sumAttributeValues < sumMaxAttrib
-      || validateAttribute1
-      || validateAttribute2
-      || validateAttribute3
+    return ((sumAttributeValues > sumMaxAttrib)
+      || !validateAttribute1
+      || !validateAttribute2
+      || !validateAttribute3
     );
   };
 
   isSaveButtonDisabled = () => {
-    // console.log('isSaveButtonDisabled')
-    // console.log(this.checkAttributeValues());
-    // console.log(this.checkFieldEntry())
     if (this.checkFieldEntry() === false && this.checkAttributeValues() === false) {
-       return true
+       return false
             } else {
-              return false
+              return true
     }
-              
   };
 
   render() {
@@ -115,13 +86,14 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
       // hasTrunfo,
-      isSaveButtonDisabled,
+      // isSaveButtonDisabled,
       // onInputChange,
       // onSaveButtonClick,
     } = this.state;
     // console.log(this.state)
     // console.log(isSaveButtonDisabled)
     return (
+
       <main>
         <h1>My Tryunfo</h1>
         <div className="prin">
@@ -154,7 +126,6 @@ class App extends React.Component {
           </div>
         </div>
       </main>
-
     );
   }
 }
