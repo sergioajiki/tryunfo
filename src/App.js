@@ -15,7 +15,7 @@ class App extends React.Component {
     cardRare: 'normal',
     cardTrunfo: false,
     // hasTrunfo: false,
-    // isSaveButtonDisabled: '',
+    isSaveButtonDisabled: false,
     // onInputChange: '',
     // onSaveButtonClick: '',
   };
@@ -45,11 +45,18 @@ class App extends React.Component {
     //   return true;
     // }
     // return false;
-    return (cardName.length === 0
-      || cardDescription.length === 0
-      || cardImage.length === 0
-      || cardRare === '');
+    // return (cardName.length === 0
+    //   || cardDescription.length === 0
+    //   || cardImage.length === 0
+    //   || cardRare === '');
+  return (cardName.length > 0
+    || cardDescription.length > 0
+    || cardImage.length > 0
+    || cardRare > 0);
   };
+
+
+
 
   checkAttributeValues = () => {
     const {
@@ -78,20 +85,23 @@ class App extends React.Component {
     //   return true;
     // }
     // return false;
-    return (sumAttributeValues > sumMaxAttrib
-      || !validateAttribute1
-      || !validateAttribute2
-      || !validateAttribute3
+    return (sumAttributeValues < sumMaxAttrib
+      || validateAttribute1
+      || validateAttribute2
+      || validateAttribute3
     );
   };
 
   isSaveButtonDisabled = () => {
     // console.log('isSaveButtonDisabled')
-    console.log(this.checkAttributeValues());
+    // console.log(this.checkAttributeValues());
     // console.log(this.checkFieldEntry())
     if (this.checkFieldEntry() === false && this.checkAttributeValues() === false) {
-      return true;
-    }
+       return false
+            } else {
+              return true
+            }
+              
   };
 
   render() {
@@ -105,7 +115,7 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
       // hasTrunfo,
-      // isSaveButtonDisabled,
+      isSaveButtonDisabled,
       // onInputChange,
       // onSaveButtonClick,
     } = this.state;
