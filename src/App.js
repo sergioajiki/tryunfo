@@ -111,15 +111,21 @@ class App extends React.Component {
     
   };
 
-  checkHasTrunfo = () => {
-   
+  checkHasTrunfo = () => {   
     const { listCardsSaved } = this.state;
     console.log(listCardsSaved)
     console.log(listCardsSaved.includes({cardTrunfo: 'true'}));
-    console.log(listCardsSaved.map((card) => card.cardTrue).includes('true'));
-    console.log(listCardsSaved.some((item) => item.cardName === 'true'))
+    console.log(listCardsSaved.map((card) => card.cardTrunfo.includes('true')));
+    console.log(listCardsSaved.some((item) => item.cardTrunfo === 'true'))
   }
-  
+  hasTrunfo = () => {
+    // logica
+    // se cardTrunfo = false exibe botão checked
+    // se cardTrunfo = true exibe mensagem
+
+  }
+
+
   render() {
     const {
       cardName,
