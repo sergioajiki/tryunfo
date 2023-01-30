@@ -8,9 +8,9 @@ class App extends React.Component {
   state = {
     cardName: '',
     cardDescription: '',
-    cardAttr1: '',
-    cardAttr2: '',
-    cardAttr3: '',
+    cardAttr1: 0,
+    cardAttr2: 0,
+    cardAttr3: 0,
     cardImage: '',
     cardRare: 'normal',
     cardTrunfo: false,
@@ -72,7 +72,7 @@ class App extends React.Component {
   && this.checkAttributeValues() === false);
 
   onSaveButtonClick = () => {
-      const {
+    const {
       cardName,
       cardDescription,
       cardAttr1,
@@ -97,11 +97,18 @@ class App extends React.Component {
         cardImage,
         cardRare,
         cardTrunfo,
-      }
-      ]
-     }))
-
-  }
+      },
+      ],
+      cardName: '',
+      cardDescription: '',
+      cardAttr1: 0,
+      cardAttr2: 0,
+      cardAttr3: 0,
+      cardImage: '',
+      cardRare: 'normal',
+      cardTrunfo: false,
+    }));
+  };
 
   render() {
     const {
