@@ -82,7 +82,7 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
       // listCardsSaved,
-      // hasTrunfo,
+      hasTrunfo,
       // isSaveButtonDisabled,
       // onInputChange,
       // onSaveButtonClick,
@@ -108,8 +108,18 @@ class App extends React.Component {
       cardRare: 'normal',
       cardTrunfo: false,
     }));
+    
   };
 
+  checkHasTrunfo = () => {
+   
+    const { listCardsSaved } = this.state;
+    console.log(listCardsSaved)
+    console.log(listCardsSaved.includes({cardTrunfo: 'true'}));
+    console.log(listCardsSaved.map((card) => card.cardTrue).includes('true'));
+    console.log(listCardsSaved.some((item) => item.cardName === 'true'))
+  }
+  
   render() {
     const {
       cardName,
@@ -133,6 +143,7 @@ class App extends React.Component {
         <div className="prin">
           <div className="formulario">
             <Form
+              checkHasTrunfo={ this.checkHasTrunfo() }
               onInputChange={ this.onInputChangeForm }
               cardName={ cardName }
               cardDescription={ cardDescription }

@@ -50,9 +50,11 @@ class Form extends React.Component {
       cardImage,
       cardRare,
       cardTrunfo,
+      hasTrunfo,
       isSaveButtonDisabled,
       onInputChange,
       onSaveButtonClick,
+      checkHasTrunfo,
       // listCardsSaved,
     } = this.props;
 
@@ -187,6 +189,7 @@ class Form extends React.Component {
           >
             Salvar
           </button>
+          <p> { checkHasTrunfo } </p>
         </form>
       </>
     );
