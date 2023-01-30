@@ -45,11 +45,11 @@ class App extends React.Component {
     //   return true;
     // }
     // return false;
-   return (cardName.length === 0
+    return (cardName.length === 0
       || cardDescription.length === 0
       || cardImage.length === 0
       || cardRare === '');
-    };
+  };
 
   checkAttributeValues = () => {
     const {
@@ -78,11 +78,11 @@ class App extends React.Component {
     //   return true;
     // }
     // return false;
-  return (sumAttributeValues > sumMaxAttrib
+    return (sumAttributeValues > sumMaxAttrib
       || !validateAttribute1
       || !validateAttribute2
       || !validateAttribute3
-    )
+    );
   };
 
   isSaveButtonDisabled = () => {
