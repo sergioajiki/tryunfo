@@ -58,6 +58,20 @@ class Form extends React.Component {
       // listCardsSaved,
     } = this.props;
 
+    const checkTrunfo = (
+      <label htmlFor="super-trunfo">
+        Super Trybe Trunfo
+        <input
+          data-testid="trunfo-input"
+          id="super-trunfo"
+          name="cardTrunfo"
+          type="checkbox"
+          checked={ cardTrunfo }
+          onChange={ onInputChange }
+        />
+      </label>
+    );
+
     return (
       <>
         <h1>Adicione Nova Carta</h1>
@@ -165,41 +179,13 @@ class Form extends React.Component {
           </label>
           <br />
           <span>
-              {
-              hasTrunfo ? <p>Você já tem um Super Trunfo em seu baralho</p> 
-              :<input
-              data-testid="trunfo-input"
-              id="super-trunfo"
-              name="cardTrunfo"
-              type="checkbox"
-              // maxLength="40"
-              checked={ cardTrunfo }
-              onChange={ onInputChange }
-              required
-            />
-            }
-            </span>
-          <br />
-          {/* <label htmlFor="super-trunfo">
-            Super Trybe Trunfo
-            <input
-              data-testid="trunfo-input"
-              id="super-trunfo"
-              name="cardTrunfo"
-              type="checkbox"
-              // maxLength="40"
-              checked={ cardTrunfo }
-              onChange={ onInputChange }
-              required
-            />
-          </label> */}
-          <br />
-          {/* <span>
-            tem button?
             {
-`S${{ isSaveButtonDisabled }}`
-            }              
-          </span> */}
+              hasTrunfo ? <p>Você já tem um Super Trunfo em seu baralho</p>
+                : checkTrunfo
+            }
+          </span>
+          <br />
+          <br />
           <button
             type="submit"
             data-testid="save-button"
