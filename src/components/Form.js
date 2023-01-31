@@ -54,7 +54,7 @@ class Form extends React.Component {
       isSaveButtonDisabled,
       onInputChange,
       onSaveButtonClick,
-      checkHasTrunfo,
+      // checkHasTrunfo,
       // listCardsSaved,
     } = this.props;
 
@@ -164,7 +164,23 @@ class Form extends React.Component {
             </select>
           </label>
           <br />
-          <label htmlFor="super-trunfo">
+          <span>
+              {
+              hasTrunfo ? <p>Você já tem um Super Trunfo em seu baralho</p> 
+              :<input
+              data-testid="trunfo-input"
+              id="super-trunfo"
+              name="cardTrunfo"
+              type="checkbox"
+              // maxLength="40"
+              checked={ cardTrunfo }
+              onChange={ onInputChange }
+              required
+            />
+            }
+            </span>
+          <br />
+          {/* <label htmlFor="super-trunfo">
             Super Trybe Trunfo
             <input
               data-testid="trunfo-input"
@@ -176,8 +192,14 @@ class Form extends React.Component {
               onChange={ onInputChange }
               required
             />
-          </label>
+          </label> */}
           <br />
+          {/* <span>
+            tem button?
+            {
+`S${{ isSaveButtonDisabled }}`
+            }              
+          </span> */}
           <button
             type="submit"
             data-testid="save-button"
@@ -189,7 +211,6 @@ class Form extends React.Component {
           >
             Salvar
           </button>
-          <p> { checkHasTrunfo } </p>
         </form>
       </>
     );
