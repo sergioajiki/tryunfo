@@ -131,7 +131,7 @@ class App extends React.Component {
       cardImage,
       cardRare,
       cardTrunfo,
-      // listCardsSaved,
+      listCardsSaved,
       // hasTrunfo,
       // isSaveButtonDisabled,
       // onInputChange,
@@ -156,6 +156,7 @@ class App extends React.Component {
               hasTrunfo={ this.hasTrunfo() }
               isSaveButtonDisabled={ this.isSaveButtonDisabled() }
               onSaveButtonClick={ this.onSaveButtonClick }
+              listCardsSaved={ listCardsSaved }
             />
           </div>
           <div className="card">
@@ -171,6 +172,23 @@ class App extends React.Component {
               cardTrunfo={ cardTrunfo }
             />
           </div>
+        </div>
+        <div className="listCardsSaved">
+          {
+            listCardsSaved.map((card, index) => (
+              <Card
+                key={ index }
+                cardName={ card.cardName }
+                cardImage={ card.cardImage }
+                cardDescription={ card.cardDescription }
+                cardAttr1={ card.cardAttr1 }
+                cardAttr2={ card.cardAttr2 }
+                cardAttr3={ card.cardAttr3 }
+                cardRare={ card.cardRare }
+                cardTrunfo={ card.cardTrunfo }
+              />
+            ))
+          }
         </div>
       </main>
     );
