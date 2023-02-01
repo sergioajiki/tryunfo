@@ -3,7 +3,7 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  }
+}
 
 .nameCard {
   background-color: rgb(14, 36, 1);
@@ -12,7 +12,7 @@
   color: white;
   display: block;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 700;
   margin-top: 10px;
   text-align: end;
   width: 90%;
@@ -20,7 +20,7 @@
 
 .descriptionCard {
   background-color: rgb(14, 95, 61);
-  color:white;
+  color: white;
   font-size: 15px;
   font-style: oblique;
   width: 90%;
@@ -51,10 +51,9 @@ img {
 
 .attribs {
   align-items: center;
-  /* background-color: aqua; */
   border-radius: 5px;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   margin-bottom: 5px;
   margin-top: 5px;
   width: 100%;
@@ -76,5 +75,5 @@ img {
 .sTrunfo {
   color: white;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 700;
 }
