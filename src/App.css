@@ -17,7 +17,8 @@ h1 {
 }
 
 .card {
-  background-color: dodgerblue;
+  background-color: rgb(14, 95, 61);
+  border-radius: 10px;
   width: 45%;
 }
 

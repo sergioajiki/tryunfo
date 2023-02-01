@@ -112,13 +112,23 @@ class App extends React.Component {
 
   hasTrunfo = () => {
     const { listCardsSaved } = this.state;
-    console.log(listCardsSaved);
+    // console.log(listCardsSaved);
     // console.log(listCardsSaved.includes({cardTrunfo: 'true'}));
     // console.log(listCardsSaved.map((card) => card.cardTrunfo.includes('true')));
     // console.log(listCardsSaved.some((item) => item.cardTrunfo === true))
     const confirmTrunfo = listCardsSaved.some((item) => item.cardTrunfo === true);
-    console.log(confirmTrunfo);
+    // console.log(confirmTrunfo);
     return confirmTrunfo;
+  };
+
+  deleteCard = (delThisIndex) => {
+    const { listCardsSaved } = this.state;
+    const filteredList = listCardsSaved.filter((_task, index) => (
+      index !== delThisIndex));
+    console.log(filteredList);
+    this.setState({ listCardsSaved: filteredList });
+    console.log(this.state);
+    console.log(listCardsSaved);
   };
 
   render() {
@@ -176,17 +186,26 @@ class App extends React.Component {
         <div className="listCardsSaved">
           {
             listCardsSaved.map((card, index) => (
-              <Card
-                key={ index }
-                cardName={ card.cardName }
-                cardImage={ card.cardImage }
-                cardDescription={ card.cardDescription }
-                cardAttr1={ card.cardAttr1 }
-                cardAttr2={ card.cardAttr2 }
-                cardAttr3={ card.cardAttr3 }
-                cardRare={ card.cardRare }
-                cardTrunfo={ card.cardTrunfo }
-              />
+              <div key={ index }>
+                <Card
+                  cardName={ card.cardName }
+                  cardImage={ card.cardImage }
+                  cardDescription={ card.cardDescription }
+                  cardAttr1={ card.cardAttr1 }
+                  cardAttr2={ card.cardAttr2 }
+                  cardAttr3={ card.cardAttr3 }
+                  cardRare={ card.cardRare }
+                  cardTrunfo={ card.cardTrunfo }
+                />
+                <button
+                  id={ index }
+                  type="button"
+                  data-testid="delete-button"
+                  onClick={ () => this.deleteCard(index) }
+                >
+                  Excluir
+                </button>
+              </div>
             ))
           }
         </div>

@@ -1,0 +1,80 @@
+.cardMain {
+  align-items: center;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  }
+
+.nameCard {
+  background-color: rgb(14, 36, 1);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: end;
+  width: 90%;
+}
+
+.descriptionCard {
+  background-color: rgb(14, 95, 61);
+  color:white;
+  font-size: 15px;
+  font-style: oblique;
+  width: 90%;
+}
+
+.imageCard {
+  background-color: black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 200px;
+  overflow: hidden;
+  width: 90%;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.attributes {
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.attribs {
+  align-items: center;
+  /* background-color: aqua; */
+  border-radius: 5px;
+  display: flex;
+  justify-content:space-between;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.attribValue {
+  align-items: center;
+  background-color: rgb(14, 36, 1);
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+  display: flex;
+  height: auto;
+  margin-left: 20px;
+  padding: 5px;
+  width : 20px;
+}
+
+.sTrunfo {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
