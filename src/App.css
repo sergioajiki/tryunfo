@@ -1,5 +1,9 @@
 main {
+  align-items: center;
   background-color: gray;
+  display: flex;
+  flex-direction: column;
+
 }
 
 h1 {
@@ -8,7 +12,10 @@ h1 {
 
 .prin {
   display: flex;
+  align-items: center;
+  width: 700px;
   justify-content: space-around;
+
 }
 
 .formulario {
@@ -19,10 +26,12 @@ h1 {
 .card {
   background-color: rgb(14, 95, 61);
   border-radius: 10px;
-  width: 45%;
+  width: 300px
 }
 
-.list {
+.listCardsSaved {
   background-color: rgb(118, 124, 27);
-  width: 45%;
+  display: flex;
+  width: 80%;
+  
 }

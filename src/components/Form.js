@@ -153,7 +153,7 @@ class Form extends React.Component {
               id="image"
               name="cardImage"
               type="text"
-              maxLength="100"
+              // maxLength="100"
               value={ cardImage }
               onChange={ onInputChange }
               required
